@@ -2,10 +2,19 @@
 
 class EmailShielded:
     def __init__(self, email: str):
-        self.raw_email = email
+        self._raw_email = email
+        self.raw_email = self._raw_email
 
     @property
-    def shielded_email(self):
+    def raw_email(self):
+        return self._raw_email
+
+    @raw_email.setter
+    def raw_email(self, value):
+        self._raw_email = value
+        self.shielded_email = self.shield_email()
+
+    def shield_email(self):
         name, domain = self.raw_email.split('@')
         return f'{"x" * len(name)}@{domain}'
 
