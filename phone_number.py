@@ -31,4 +31,9 @@ class PhoneNumberShielded:
 
 
 if __name__ == '__main__':
-    print(PhoneNumberShielded('+7-937-663-40-90'))
+    print(PhoneNumberShielded('+7-800-555-35-35'))
+    print(PhoneNumberShielded('+7 800 555 35 35'))
+    print(PhoneNumberShielded('+798005553535'))
+    print(PhoneNumberShielded('+7-800-555-35-35', 4))
+    print(PhoneNumberShielded('+7 800 555 35 35', 1))
+    print(PhoneNumberShielded('+798005553535', 20))
